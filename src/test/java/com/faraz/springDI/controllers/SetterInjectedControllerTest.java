@@ -1,17 +1,15 @@
 package com.faraz.springDI.controllers;
 
-import com.faraz.springDI.service.GreetingServiceImpl;
+import com.faraz.springDI.service.PropertyGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectedControllerTest {
     SetterInjectedController setterInjectedController;
     @BeforeEach
     void setUp() {
         setterInjectedController = new SetterInjectedController();
-        setterInjectedController.setGreetingService(new GreetingServiceImpl());
+        setterInjectedController.setGreetingService(new PropertyGreetingServiceImpl());
     }
 
     @Test

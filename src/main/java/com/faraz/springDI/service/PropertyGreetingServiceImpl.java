@@ -3,9 +3,9 @@ package com.faraz.springDI.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class PropertyGreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World";
+        return "Hello World -- Property";
     }
 }
