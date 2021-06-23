@@ -15,6 +15,8 @@ public class SpringDiApplication {
 		ApplicationContext ctx = SpringApplication.run(SpringDiApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
 
+		System.out.println("--------------Primary");
+
 		System.out.println(myController.sayHello());
 
 		System.out.println("------------------Property");
