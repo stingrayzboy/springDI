@@ -1,9 +1,6 @@
 package com.faraz.springDI;
 
-import com.faraz.springDI.controllers.ConstructorInjectedController;
-import com.faraz.springDI.controllers.MyController;
-import com.faraz.springDI.controllers.PropertyInjectedController;
-import com.faraz.springDI.controllers.SetterInjectedController;
+import com.faraz.springDI.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +11,11 @@ public class SpringDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SpringDiApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println("-----------------I18N");
+
+		System.out.println(i18nController.sayGreeting());
 
 		System.out.println("--------------Primary");
 
